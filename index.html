@@ -3,185 +3,253 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <!-- EDIT: page title shown in the browser tab and search results -->
-  <title>Manodip Routh — Portfolio</title>
-  <meta name="description" content="Personal portfolio of Manodip Routh." />
+  <title>Manodip Routh, Ph.D.</title>
+  <meta name="description" content="Manodip Routh — Postdoctoral Research Fellow in the Department of Applied Physics, University of Tokyo. Theoretical and computational condensed matter physics." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,400;6..72,500;6..72,600;6..72,700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
   <!-- ===== Header / Nav ===== -->
   <header class="site-header">
     <nav class="nav container">
-      <a href="#top" class="brand">MR<span class="dot">.</span></a>
-      <ul class="nav-links">
+      <a href="#top" class="brand">Manodip<span class="dot">.</span> Routh</a>
+      <ul class="nav-links" id="nav-menu">
         <li><a href="#about">About</a></li>
-        <li><a href="#projects">Projects</a></li>
-        <li><a href="#skills">Skills</a></li>
+        <li><a href="#research">Research</a></li>
+        <li><a href="#publications">Publications</a></li>
+        <li><a href="#cv">CV</a></li>
         <li><a href="#contact">Contact</a></li>
       </ul>
-      <button id="theme-toggle" class="theme-toggle" aria-label="Toggle dark mode">
-        <span class="theme-icon">🌙</span>
-      </button>
+      <div class="nav-actions">
+        <button id="theme-toggle" class="theme-toggle" aria-label="Toggle dark mode">
+          <span class="theme-icon">🌙</span>
+        </button>
+        <button id="nav-toggle" class="nav-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="nav-menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
     </nav>
   </header>
 
   <main id="top">
-    <!-- ===== Hero ===== -->
-    <section class="hero container">
-      <p class="eyebrow">Hi, my name is</p>
-      <!-- EDIT: your name -->
-      <h1 class="hero-name">Manodip Routh.</h1>
-      <!-- EDIT: your headline / what you do -->
-      <h2 class="hero-tagline">I build things for the web.</h2>
-      <p class="hero-intro">
-        I'm a developer who enjoys turning ideas into clean, accessible,
-        and performant experiences. Welcome to my corner of the internet.
+    <!-- ===== About / Hero ===== -->
+    <section id="about" class="section container about">
+      <div class="about-photo">
+        <img src="profile.jpg" alt="Manodip Routh" class="portrait" />
+        <ul class="social">
+          <li><a href="https://www.linkedin.com/in/manodip-routh" target="_blank" rel="noopener">LinkedIn</a></li>
+          <li><a href="https://scholar.google.com/citations?user=slKCouQAAAAJ&hl=en" target="_blank" rel="noopener">Google Scholar</a></li>
+          <li><a href="https://arxiv.org/search/advanced?advanced=&terms-0-operator=AND&terms-0-term=Routh%2C+M&terms-0-field=author&classification-physics=y&classification-physics_archives=cond-mat&classification-include_cross_list=include&date-filter_by=all_dates&date-date_type=submitted_date&abstracts=show&size=200&order=-announced_date_first" target="_blank" rel="noopener">arXiv</a></li>
+          <li><a href="https://orcid.org/0000-0001-9795-801X" target="_blank" rel="noopener">ORCID</a></li>
+        </ul>
+      </div>
+      <div class="about-text">
+        <p class="eyebrow">Welcome</p>
+        <h1 class="name">Manodip Routh</h1>
+        <p class="role">
+          Postdoctoral Research Fellow · Department of Applied Physics,
+          <a href="https://www.u-tokyo.ac.jp/en/index.html" target="_blank" rel="noopener">The University of Tokyo</a>, Japan
+        </p>
+        <p>
+          I am Manodip Routh, a Postdoctoral Research Fellow in the
+          <a href="https://www.ap.t.u-tokyo.ac.jp/" target="_blank" rel="noopener">Department of Applied Physics</a>
+          at the University of Tokyo, Japan.
+        </p>
+        <p>
+          My research interests lie in theoretical and computational condensed
+          matter physics, with a particular emphasis on low-dimensional,
+          strongly correlated quantum systems where competing or frustrated
+          interactions play a central role. To investigate these systems, I use
+          numerical methods such as exact diagonalization (ED) and the density
+          matrix renormalization group (DMRG).
+        </p>
+
+        <div class="news">
+          <h2 class="news-title">News</h2>
+          <ul class="news-list">
+            <!-- EDIT: add newest items at the top -->
+            <li><span class="news-date">12/2025</span> Joined the Motome group at UTokyo as a Postdoc!</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Research ===== -->
+    <section id="research" class="section container">
+      <h2 class="section-title">Research</h2>
+      <p class="lead">
+        My broader research interests lie in the theoretical and computational
+        study of frustrated spin systems in low dimension. I am particularly
+        interested in the topics below:
       </p>
-      <div class="hero-cta">
-        <a href="#projects" class="btn btn-primary">View my work</a>
-        <a href="#contact" class="btn btn-ghost">Get in touch</a>
+      <ul class="topic-list">
+        <li>Novel quantum phases in frustrated spin systems</li>
+        <li>Quantum spin liquids, Kitaev model</li>
+        <li>Low-energy effective spin models for real materials (transition-metal compounds, rare-earth compounds)</li>
+        <li>Density matrix renormalization group (DMRG), tensor network methods</li>
+      </ul>
+    </section>
+
+    <!-- ===== Publications ===== -->
+    <section id="publications" class="section container">
+      <h2 class="section-title">Publications</h2>
+      <p class="lead">
+        See also my
+        <a href="https://scholar.google.com/citations?user=slKCouQAAAAJ&hl=en" target="_blank" rel="noopener">Google Scholar</a>
+        and <a href="https://arxiv.org/search/advanced?advanced=&terms-0-operator=AND&terms-0-term=Routh%2C+M&terms-0-field=author&classification-physics=y&classification-physics_archives=cond-mat&classification-include_cross_list=include&date-filter_by=all_dates&date-date_type=submitted_date&abstracts=show&size=200&order=-announced_date_first" target="_blank" rel="noopener">arXiv</a> profiles.
+      </p>
+
+      <div class="pub-year">
+        <h3>2025</h3>
+        <ol class="pub-list">
+          <li class="pub">
+            <p class="pub-title">“Exploring quantum phases in frustrated spin-1/2 chain and ladders: a detailed review” <span class="badge">Invited Topical Review</span></p>
+            <p class="pub-authors"><strong>M. Routh</strong>, S. Ghosh and M. Kumar</p>
+            <p class="pub-venue">J. Phys.: Condens. Matter <strong>37</strong>, 403001 (2025)</p>
+          </li>
+          <li class="pub">
+            <p class="pub-title">“Emergent quasi-particles in a spin-1 trimer chain”</p>
+            <p class="pub-authors"><strong>M. Routh</strong>, A. Biswas, M. Kumar</p>
+            <p class="pub-venue">Phys. Rev. B <strong>112</strong>, 094436 (2025)</p>
+          </li>
+        </ol>
+      </div>
+
+      <div class="pub-year">
+        <h3>2024</h3>
+        <ol class="pub-list">
+          <li class="pub">
+            <p class="pub-title">“Interchain interactions, multimagnon condensation, and strain effect in the chain compound NaVOPO₄”</p>
+            <p class="pub-authors">M. Gupta, <strong>M. Routh</strong>, M. Kumar, T. Saha-Dasgupta</p>
+            <p class="pub-venue">Phys. Rev. B <strong>110</strong>, 054441 (2024)</p>
+          </li>
+          <li class="pub">
+            <p class="pub-title">“Emergent quadrupolar order in the spin-1/2 Kitaev–Heisenberg model”</p>
+            <p class="pub-authors"><strong>M. Routh</strong>, S. Ghosh, J. van den Brink, S. Nishimoto, M. Kumar</p>
+            <p class="pub-venue">Phys. Rev. B (Letter) <strong>109</strong>, L220403 (2024)</p>
+          </li>
+        </ol>
+      </div>
+
+      <div class="pub-year">
+        <h3>2023</h3>
+        <ol class="pub-list">
+          <li class="pub">
+            <p class="pub-title">“Proximate Dirac spin liquid in the honeycomb lattice J₁–J₃ XXZ model: Numerical study and application to cobaltates”</p>
+            <p class="pub-authors">A. Bose, <strong>M. Routh</strong>, S. Voleti, S. K. Saha, M. Kumar, T. Saha-Dasgupta, A. Paramekanti</p>
+            <p class="pub-venue">Phys. Rev. B <strong>108</strong>, 174422 (2023)</p>
+          </li>
+        </ol>
+      </div>
+
+      <div class="pub-year">
+        <h3>2022</h3>
+        <ol class="pub-list">
+          <li class="pub">
+            <p class="pub-title">“Spin-Peierls transition of J₁–J₂ and extended models with ferromagnetic J₁: Sublattice dimerization and thermodynamics of zigzag chains in β-TeVO₄”</p>
+            <p class="pub-authors"><strong>M. Routh</strong>, S. K. Saha, M. Kumar, Z. G. Soos</p>
+            <p class="pub-venue">Phys. Rev. B <strong>105</strong>, 235109 (2022)</p>
+          </li>
+        </ol>
+      </div>
+
+      <div class="pub-year">
+        <h3>2021</h3>
+        <ol class="pub-list">
+          <li class="pub">
+            <p class="pub-title">“Low-temperature thermodynamics of the antiferromagnetic J₁–J₂ model: Entropy, critical points, and spin gap”</p>
+            <p class="pub-authors">S. K. Saha, <strong>M. Routh</strong>, M. Kumar, Z. G. Soos</p>
+            <p class="pub-venue">Phys. Rev. B <strong>103</strong>, 245139 (2021)</p>
+          </li>
+        </ol>
       </div>
     </section>
 
-    <!-- ===== About ===== -->
-    <section id="about" class="section container">
-      <h2 class="section-title"><span class="num">01.</span> About Me</h2>
-      <div class="about-grid">
-        <div class="about-text">
-          <!-- EDIT: a couple of short paragraphs about yourself -->
-          <p>
-            Hello! I'm Manodip, and I love building for the web. My interest
-            started with tweaking themes on a blog, and it grew into a full-on
-            passion for software development.
-          </p>
-          <p>
-            These days I focus on writing readable code, learning new tools,
-            and shipping small projects end to end. Here are a few technologies
-            I've been working with recently:
-          </p>
-          <ul class="tech-list">
-            <li>JavaScript (ES6+)</li>
-            <li>HTML &amp; CSS</li>
-            <li>Python</li>
-            <li>Git &amp; GitHub</li>
-            <li>React</li>
-            <li>Node.js</li>
-          </ul>
-        </div>
-        <div class="about-photo">
-          <!-- EDIT: drop a photo named profile.jpg next to this file,
-               or leave this monogram placeholder. -->
-          <div class="photo-frame">
-            <div class="monogram">MR</div>
-          </div>
+    <!-- ===== CV ===== -->
+    <section id="cv" class="section container">
+      <h2 class="section-title">CV</h2>
+
+      <h3 class="cv-heading">Current Position</h3>
+      <div class="cv-entry">
+        <div class="cv-period">Dec 2025 – Present</div>
+        <div class="cv-body">
+          <h4>Postdoctoral Research Fellow</h4>
+          <p>Department of Applied Physics, The University of Tokyo, Hongo 7-3-1, Bunkyo-ku, Tokyo 113-8656, Japan</p>
+          <p class="cv-meta">Advisor: Prof. Yukitoshi Motome
+            (<a href="https://www.motome-lab.t.u-tokyo.ac.jp/index-e.html" target="_blank" rel="noopener">Group webpage</a>)</p>
         </div>
       </div>
-    </section>
 
-    <!-- ===== Projects ===== -->
-    <section id="projects" class="section container">
-      <h2 class="section-title"><span class="num">02.</span> Projects</h2>
-      <div class="projects-grid">
-        <!-- EDIT: duplicate a card for each project -->
-        <article class="card">
-          <div class="card-top">
-            <span class="folder">📁</span>
-            <div class="card-links">
-              <a href="#" aria-label="GitHub repository">Code</a>
-              <a href="#" aria-label="Live demo">Live</a>
-            </div>
-          </div>
-          <h3 class="card-title">Project One</h3>
-          <p class="card-desc">
-            A short description of what this project does and what problem it
-            solves. Mention the interesting parts.
-          </p>
-          <ul class="card-tags">
-            <li>React</li><li>CSS</li><li>API</li>
-          </ul>
-        </article>
-
-        <article class="card">
-          <div class="card-top">
-            <span class="folder">📁</span>
-            <div class="card-links">
-              <a href="#" aria-label="GitHub repository">Code</a>
-              <a href="#" aria-label="Live demo">Live</a>
-            </div>
-          </div>
-          <h3 class="card-title">Project Two</h3>
-          <p class="card-desc">
-            Another project. Describe the stack, your role, and one thing you
-            learned or are proud of.
-          </p>
-          <ul class="card-tags">
-            <li>Python</li><li>Flask</li><li>SQLite</li>
-          </ul>
-        </article>
-
-        <article class="card">
-          <div class="card-top">
-            <span class="folder">📁</span>
-            <div class="card-links">
-              <a href="#" aria-label="GitHub repository">Code</a>
-              <a href="#" aria-label="Live demo">Live</a>
-            </div>
-          </div>
-          <h3 class="card-title">Project Three</h3>
-          <p class="card-desc">
-            One more card to round out the grid. Keep descriptions concise and
-            outcome-focused.
-          </p>
-          <ul class="card-tags">
-            <li>JavaScript</li><li>HTML</li><li>Canvas</li>
-          </ul>
-        </article>
+      <h3 class="cv-heading">Experience</h3>
+      <div class="cv-entry">
+        <div class="cv-period">May – Nov 2025</div>
+        <div class="cv-body">
+          <h4>Bridge Fellow</h4>
+          <p>S. N. Bose National Centre for Basic Sciences (SNBNCBS), Salt Lake, Kolkata 700 106, India</p>
+        </div>
       </div>
-    </section>
+      <div class="cv-entry">
+        <div class="cv-period">Apr – Jun 2023</div>
+        <div class="cv-body">
+          <h4>Visiting Researcher</h4>
+          <p>Institute for Theoretical Solid State Physics, IFW Dresden, 01069 Dresden, Germany</p>
+          <p class="cv-meta">Advisors: Prof. Satoshi Nishimoto &amp; Prof. Jeroen van den Brink</p>
+        </div>
+      </div>
 
-    <!-- ===== Skills ===== -->
-    <section id="skills" class="section container">
-      <h2 class="section-title"><span class="num">03.</span> Skills</h2>
-      <div class="skills-grid">
-        <div class="skill-group">
-          <h3>Languages</h3>
-          <ul><li>JavaScript</li><li>Python</li><li>HTML</li><li>CSS</li><li>SQL</li></ul>
+      <h3 class="cv-heading">Education</h3>
+      <div class="cv-entry">
+        <div class="cv-period">2019 – 2025</div>
+        <div class="cv-body">
+          <h4>Ph.D. in Theoretical Condensed Matter Physics</h4>
+          <p>S. N. Bose National Centre for Basic Sciences (SNBNCBS), Kolkata, India</p>
+          <p class="cv-meta">Thesis: <em>Thermal and Quantum Fluctuations in Low Dimensional Frustrated Spin Systems</em>
+            (<a href="https://apply.bose.res.in/wp/linked-objects/academic-programmes/PhD%20Thesies/394_Manodip%20Routh.pdf" target="_blank" rel="noopener">PDF</a>)<br />
+            Advisor: Prof. Manoranjan Kumar</p>
         </div>
-        <div class="skill-group">
-          <h3>Frameworks &amp; Tools</h3>
-          <ul><li>React</li><li>Node.js</li><li>Git</li><li>Vite</li><li>Figma</li></ul>
+      </div>
+      <div class="cv-entry">
+        <div class="cv-period">2017 – 2019</div>
+        <div class="cv-body">
+          <h4>M.Sc. in Physics</h4>
+          <p>Department of Physics, IIT Guwahati, Assam, India</p>
+          <p class="cv-meta">Thesis: <em>Effective theories of Dark Matter interactions and Higgs portal paradigm</em><br />
+            Advisor: Prof. Subhaditya Bhattacharya</p>
         </div>
-        <div class="skill-group">
-          <h3>Currently learning</h3>
-          <ul><li>TypeScript</li><li>Testing</li><li>Accessibility</li></ul>
+      </div>
+      <div class="cv-entry">
+        <div class="cv-period">2014 – 2017</div>
+        <div class="cv-body">
+          <h4>B.Sc. in Physics (Honours)</h4>
+          <p>Midnapore College, Vidyasagar University, West Bengal 721101, India</p>
         </div>
       </div>
     </section>
 
     <!-- ===== Contact ===== -->
-    <section id="contact" class="section container contact">
-      <h2 class="section-title centered"><span class="num">04.</span> Get In Touch</h2>
-      <p class="contact-lead">
-        I'm always open to interesting conversations and opportunities. Whether
-        you have a question or just want to say hi, my inbox is open.
-      </p>
-      <!-- EDIT: your email address -->
-      <a class="btn btn-primary" href="mailto:manodiprouth2@gmail.com">Say hello</a>
+    <section id="contact" class="section container">
+      <h2 class="section-title">Contact</h2>
+      <div class="contact-grid">
+        <div class="contact-block">
+          <p class="contact-name">Dr. Manodip Routh</p>
+          <p>Department of Applied Physics, The University of Tokyo</p>
+          <p>Room 218, Faculty of Engineering Bldg. 6</p>
+          <p>Hongo 7-3-1, Bunkyo-ku, Tokyo 113-8656, Japan</p>
+        </div>
+        <div class="contact-block">
+          <p class="contact-label">Email</p>
+          <p><a href="mailto:routh-manodip@g.ecc.u-tokyo.ac.jp">routh-manodip@g.ecc.u-tokyo.ac.jp</a></p>
+          <p><a href="mailto:manodiprouth2@gmail.com">manodiprouth2@gmail.com</a></p>
+        </div>
+      </div>
     </section>
   </main>
 
   <!-- ===== Footer ===== -->
   <footer class="site-footer">
-    <div class="socials">
-      <!-- EDIT: your real profile links -->
-      <a href="https://github.com/" target="_blank" rel="noopener">GitHub</a>
-      <a href="https://www.linkedin.com/" target="_blank" rel="noopener">LinkedIn</a>
-      <a href="https://twitter.com/" target="_blank" rel="noopener">Twitter</a>
-    </div>
-    <p class="copyright">Built by Manodip Routh · <span id="year"></span></p>
+    <p class="copyright">© <span id="year"></span> Manodip Routh. All rights reserved.</p>
   </footer>
 
   <script src="script.js"></script>

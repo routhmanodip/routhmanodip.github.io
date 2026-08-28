@@ -1,47 +1,50 @@
-# Personal Portfolio
+# Manodip Routh — Academic Homepage
 
-A simple, responsive personal portfolio site — plain HTML, CSS, and JavaScript,
-no build step. Ready to host for free on GitHub Pages.
+Personal academic website for Manodip Routh, Ph.D. — plain HTML, CSS, and
+JavaScript, no build step. Hosted for free on GitHub Pages.
+
+Sections: About · Research · Publications · CV · Contact.
 
 ## Files
 
 | File | What it is |
 |------|------------|
-| `index.html` | Page structure and content. Look for `<!-- EDIT: ... -->` comments to customize. |
-| `styles.css` | All styling and the light/dark theme tokens. |
-| `script.js`  | Theme toggle + footer year. |
+| `index.html` | Page content. Look for `<!-- EDIT: ... -->` comments to update. |
+| `styles.css` | Styling + light/dark theme tokens (academic maroon accent). |
+| `script.js`  | Dark/light toggle + auto footer year. |
+| `profile.jpg`| Your portrait, shown in the About section. |
 
 ## Preview locally
 
-Just open `index.html` in your browser. Or, for a live local server:
-
 ```bash
+cd /Users/manodip/Desktop/github-website
 python3 -m http.server 8000
 ```
 
-Then visit http://localhost:8000
+Then open http://localhost:8000 — edit a file, save, and refresh to see changes.
+Press Ctrl+C to stop the server.
 
-## Deploy to GitHub Pages
+## Publish to GitHub Pages
 
-1. Create a new repository on GitHub.
-   - For a site at `https://<username>.github.io`, name the repo **`<username>.github.io`**.
-   - For a project site at `https://<username>.github.io/<repo>`, name it anything (e.g. `portfolio`).
-2. Push this folder:
+This repo is currently **private**, so Pages is off. To go live:
+
+1. On GitHub: **Settings → General → (bottom) Change visibility → Public**.
+2. Push any local changes:
 
    ```bash
    git add .
-   git commit -m "Initial portfolio"
-   git branch -M main
-   git remote add origin https://github.com/<username>/<repo>.git
-   git push -u origin main
+   git commit -m "Update site content"
+   git push
    ```
 
-3. In the repo: **Settings → Pages → Build and deployment → Source: Deploy from a branch**,
-   choose `main` / `root`, and Save. Your site goes live in a minute or two.
+3. **Settings → Pages → Source: Deploy from a branch → `main` / `root` → Save.**
 
-## Customize
+Your site goes live at **https://routhmanodip.github.io** in a minute or two.
 
-- Replace the `<!-- EDIT -->` placeholders in `index.html` (name, bio, projects, links, email).
-- Swap the monogram for a real photo: add `profile.jpg` next to `index.html` and
-  replace the `.photo-frame` block with `<img src="profile.jpg" alt="Manodip Routh" />`.
-- Tweak colors in the `:root` / `[data-theme="dark"]` blocks at the top of `styles.css`.
+## Common edits
+
+- **News:** add a new `<li>` at the top of the `.news-list` in `index.html`.
+- **Publications:** copy a `<li class="pub">…</li>` block into the right year.
+  Wrap your own name in `<strong>M. Routh</strong>` to bold it.
+- **Accent color:** change `--accent` / `--accent-2` at the top of `styles.css`.
+- **Photo:** replace `profile.jpg` with any image of the same name.

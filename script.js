@@ -19,5 +19,24 @@ function setTheme(mode) {
   icon.textContent = mode === "dark" ? "☀️" : "🌙";
 }
 
+// ---- Mobile navigation menu ----
+const navToggle = document.getElementById("nav-toggle");
+const navMenu = document.getElementById("nav-menu");
+
+navToggle.addEventListener("click", () => {
+  const open = navMenu.classList.toggle("open");
+  navToggle.setAttribute("aria-expanded", open ? "true" : "false");
+  navToggle.setAttribute("aria-label", open ? "Close menu" : "Open menu");
+});
+
+// Collapse the menu after tapping a link.
+navMenu.querySelectorAll("a").forEach((link) => {
+  link.addEventListener("click", () => {
+    navMenu.classList.remove("open");
+    navToggle.setAttribute("aria-expanded", "false");
+    navToggle.setAttribute("aria-label", "Open menu");
+  });
+});
+
 // ---- Auto-update the footer year ----
 document.getElementById("year").textContent = new Date().getFullYear();
