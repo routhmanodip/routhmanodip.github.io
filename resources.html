@@ -50,7 +50,37 @@
       <h2 class="section-title">Resources</h2>
       <p class="lead">A collection of tools/ papers / presentations that I've found useful / interesting</p>
 
-      <p>To be updated.</p>
+      <h3 class="about-subhead">A. Numerical Tools</h3>
+      <ul class="topic-list">
+        <li><a href="https://tensornetwork.org/" target="_blank" rel="noopener">Tensor Network</a></li>
+        <li><a href="https://www.tensors.net/" target="_blank" rel="noopener">Tensors.net</a></li>
+        <li><a href="http://quattro.phys.sci.kobe-u.ac.jp/dmrg.html" target="_blank" rel="noopener">DMRG and Tensor Network by T. Nishino</a></li>
+        <li><a href="https://alps.comp-phys.org/" target="_blank" rel="noopener">ALPS – Algorithms and Libraries for Physics Simulations</a></li>
+        <li><a href="https://itensor.org/" target="_blank" rel="noopener">ITensor Library</a></li>
+        <li><a href="https://nextcloud.tfk.ph.tum.de/etn/" target="_blank" rel="noopener">European Tensor Network</a></li>
+      </ul>
+
+      <h3 class="about-subhead">B. Workshops / Conferences</h3>
+      <ul class="topic-list">
+        <li><a href="https://www.issp.u-tokyo.ac.jp/public/tnqmp2016/" target="_blank" rel="noopener">ISSP Tensor Network Lectures</a></li>
+        <li><a href="https://www.theorie.physik.uni-muenchen.de/activities/schools/archiv/asc_school_17/index.html" target="_blank" rel="noopener">2017 Arnold Sommerfeld School</a></li>
+        <li><a href="https://www.theorie.physik.uni-muenchen.de/activities/schools/archiv/asc_school_2024/index.html" target="_blank" rel="noopener">2024 Arnold Sommerfeld School</a></li>
+        <li><a href="https://www.cecam.org/workshop-details/school-on-experimental-theoretical-and-numerical-approaches-to-frustrated-quantum-magnets-1310" target="_blank" rel="noopener">School on Experimental, Theoretical and Numerical Approaches to Frustrated Quantum Magnets</a></li>
+        <li><a href="https://www.icts.res.in/program/apfm2018" target="_blank" rel="noopener">The 2nd Asia Pacific Workshop on Quantum Magnetism</a></li>
+        <li><a href="https://www.imsc.res.in/frustmag/" target="_blank" rel="noopener">Frustrated Magnetism 2017 – IMSc, Chennai</a></li>
+        <li>For an even better and much more comprehensive selection, check out Akakii Melikidze's <a href="https://web.mit.edu/redingtn/www/netadv/biblio2_3.html" target="_blank" rel="noopener">website</a></li>
+        <li><a href="https://www.youtube.com/channel/UC37kYds7QwN8w9vPBPkdVxA/playlists" target="_blank" rel="noopener">Boulder Summer School Lectures</a></li>
+        <li><a href="https://davidtong.org/teaching/" target="_blank" rel="noopener">Lecture Notes by Prof. David Tong</a></li>
+      </ul>
+
+      <h3 class="about-subhead">C. Journals</h3>
+      <ul class="topic-list">
+        <li><a href="https://journals.aps.org/prb/" target="_blank" rel="noopener">Physical Review B</a></li>
+        <li><a href="https://journals.aps.org/prl/" target="_blank" rel="noopener">Physical Review Letters</a></li>
+        <li><a href="https://www.nature.com/npjquantmats/" target="_blank" rel="noopener">npj Quantum Materials</a></li>
+        <li><a href="https://www.nature.com/ncomms/" target="_blank" rel="noopener">Nature Communications</a></li>
+        <li><a href="https://www.nature.com/commsphys/" target="_blank" rel="noopener">Communications Physics</a></li>
+      </ul>
     </section>
   </main>
 
@@ -81,7 +111,7 @@
 
       form.addEventListener("submit", async (e) => {
         e.preventDefault();
-        const hash = await sha256Hex(input.value);
+        const hash = await sha256Hex(input.value.trim());
         if (hash === RESOURCES_HASH) {
           unlock();
         } else {
