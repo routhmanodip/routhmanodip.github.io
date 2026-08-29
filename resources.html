@@ -79,15 +79,10 @@
         lockEl.hidden = true;
       }
 
-      if (localStorage.getItem("resources-unlocked") === "1") {
-        unlock();
-      }
-
       form.addEventListener("submit", async (e) => {
         e.preventDefault();
         const hash = await sha256Hex(input.value);
         if (hash === RESOURCES_HASH) {
-          localStorage.setItem("resources-unlocked", "1");
           unlock();
         } else {
           errorEl.hidden = false;
