@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Resources — Manodip Routh</title>
+  <meta name="description" content="Resources compiled by Manodip Routh — tools, papers, and presentations." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,400;6..72,500;6..72,600;6..72,700&display=swap" rel="stylesheet" />
+  <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <!-- ===== Header / Nav ===== -->
+  <header class="site-header">
+    <nav class="nav container">
+      <a href="index.html" class="brand">M. Routh, Ph.D.</a>
+      <ul class="nav-links" id="nav-menu">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="cv.html">CV</a></li>
+        <li><a href="publications.html">Publications</a></li>
+        <li><a href="resources.html" aria-current="page">Resources</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+      <div class="nav-actions">
+        <button id="theme-toggle" class="theme-toggle" aria-label="Toggle dark mode">
+          <span class="theme-icon">🌙</span>
+        </button>
+        <button id="nav-toggle" class="nav-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="nav-menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </nav>
+  </header>
+
+  <!-- ===== Lock screen ===== -->
+  <div id="lock-screen" class="lock-screen">
+    <form id="lock-form" class="lock-form">
+      <p class="lock-label">This page is password protected</p>
+      <input type="password" id="lock-password" placeholder="Password" autocomplete="off" />
+      <button type="submit">Unlock</button>
+      <p id="lock-error" class="lock-error" hidden>Incorrect password.</p>
+    </form>
+  </div>
+
+  <main id="resources-main" hidden>
+    <!-- ===== Resources ===== -->
+    <section id="resources" class="section container">
+      <h2 class="section-title">Resources</h2>
+      <p class="lead">A collection of tools/ papers / presentations that I've found useful / interesting</p>
+
+      <p>To be updated.</p>
+    </section>
+  </main>
+
+  <!-- ===== Footer ===== -->
+  <footer class="site-footer">
+    <p class="copyright">© <span id="year"></span> Manodip Routh. All rights reserved.</p>
+  </footer>
+
+  <script src="script.js"></script>
+  <script>
+    (function () {
+      const RESOURCES_HASH = "b06ab6291d21ab143e6392dac81ddcbb57b67f3e04681917d51b3b024cd201aa";
+      const mainEl = document.getElementById("resources-main");
+      const lockEl = document.getElementById("lock-screen");
+      const form = document.getElementById("lock-form");
+      const input = document.getElementById("lock-password");
+      const errorEl = document.getElementById("lock-error");
+
+      async function sha256Hex(text) {
+        const buf = await crypto.subtle.digest("SHA-256", new TextEncoder().encode(text));
+        return Array.from(new Uint8Array(buf)).map((b) => b.toString(16).padStart(2, "0")).join("");
+      }
+
+      function unlock() {
+        mainEl.hidden = false;
+        lockEl.hidden = true;
+      }
+
+      if (localStorage.getItem("resources-unlocked") === "1") {
+        unlock();
+      }
+
+      form.addEventListener("submit", async (e) => {
+        e.preventDefault();
+        const hash = await sha256Hex(input.value);
+        if (hash === RESOURCES_HASH) {
+          localStorage.setItem("resources-unlocked", "1");
+          unlock();
+        } else {
+          errorEl.hidden = false;
+          input.value = "";
+          input.focus();
+        }
+      });
+    })();
+  </script>
+</body>
+</html>
