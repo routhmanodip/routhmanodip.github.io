@@ -40,3 +40,11 @@ navMenu.querySelectorAll("a").forEach((link) => {
 
 // ---- Auto-update the footer year ----
 document.getElementById("year").textContent = new Date().getFullYear();
+
+// ---- Show the page's last-modified date in the footer ----
+const lastUpdatedEl = document.getElementById("last-updated");
+if (lastUpdatedEl) {
+  const d = new Date(document.lastModified);
+  const pad = (n) => String(n).padStart(2, "0");
+  lastUpdatedEl.textContent = `${d.getFullYear()}.${pad(d.getMonth() + 1)}.${pad(d.getDate())}`;
+}
