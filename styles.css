@@ -13,9 +13,9 @@
   --shadow:    0 6px 24px rgba(20, 25, 40, 0.07);
   --radius:    12px;
   --maxw:      880px;
-  --serif: Calibri, Carlito, "Segoe UI", Arial, sans-serif;
-  --sans: Calibri, Carlito, "Segoe UI", Arial, sans-serif;
-  --heading: Calibri, Carlito, "Segoe UI", Arial, sans-serif;
+  --serif: "Open Sans", Arial, sans-serif;
+  --sans: "Open Sans", Arial, sans-serif;
+  --heading: "Open Sans", Arial, sans-serif;
 }
 
 :root[data-theme="dark"] {
