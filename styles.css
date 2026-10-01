@@ -186,7 +186,7 @@ a:hover { text-decoration: underline; }
 .profile-card .name {
   font-family: var(--heading);
   font-size: 1.3rem;
-  font-weight: 700;
+  font-weight: 600;
   line-height: 1.2;
   margin: 0.9rem 0 0.1rem;
 }
