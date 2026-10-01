@@ -291,6 +291,36 @@ a:hover { text-decoration: underline; }
   color: var(--accent);
 }
 
+.research-topic .about-subhead { margin-top: 0; }
+.research-topic p { margin-bottom: 0.95rem; color: var(--text); }
+.research-topic sub { font-size: 0.75em; }
+.research-topic { display: flow-root; }
+.research-topic + .research-topic { margin-top: 1.6rem; }
+.highlight-figure {
+  float: left;
+  width: 46%;
+  margin: 0.35rem 1.6rem 1rem 0;
+  padding: 0.7rem 0.7rem 0.6rem;
+  background: var(--bg-alt);
+  border: 1px solid var(--border);
+  border-left: 3px solid var(--accent);
+  border-radius: var(--radius);
+}
+/* Plot has a white background, so keep it on white in dark mode too */
+.highlight-figure img {
+  width: 100%;
+  height: auto;
+  background: #fff;
+  border-radius: 6px;
+  padding: 0.3rem;
+}
+.highlight-figure figcaption {
+  margin-top: 0.5rem;
+  font-size: 0.8rem;
+  line-height: 1.55;
+  color: var(--text-soft);
+}
+
 /* =========================================================
    Publications
    ========================================================= */
@@ -386,6 +416,7 @@ a:hover { text-decoration: underline; }
 
 /* Phones & small tablets: single column + slide-down menu */
 @media (max-width: 720px) {
+  .highlight-figure { float: none; width: auto; margin: 0.4rem 0 1.2rem; }
   .nav-toggle { display: flex; }
   .nav-links {
     position: absolute;
