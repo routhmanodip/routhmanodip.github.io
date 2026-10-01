@@ -239,14 +239,6 @@ a:hover { text-decoration: underline; }
   margin: 1.4rem 0 0.6rem;
 }
 
-/* Selected publications */
-.selected-pubs {
-  grid-column: 1 / -1;
-  margin-top: 1rem;
-}
-.selected-pubs .pub-list { gap: 0.6rem; margin-bottom: 0.7rem; }
-.more-link { font-size: 0.95rem; font-weight: 600; }
-
 /* News */
 .news {
   grid-column: 1 / -1;
