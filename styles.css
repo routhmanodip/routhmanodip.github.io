@@ -296,6 +296,24 @@ a:hover { text-decoration: underline; }
 .research-topic sub { font-size: 0.75em; }
 .research-topic { display: flow-root; }
 .research-topic + .research-topic { margin-top: 1.6rem; }
+/* Toggle headings (<details>/<summary>) */
+.research-topic > summary {
+  list-style: none;
+  cursor: pointer;
+  display: flex;
+  align-items: baseline;
+  gap: 0.5rem;
+  margin-bottom: 0.6rem;
+}
+.research-topic > summary::-webkit-details-marker { display: none; }
+.research-topic > summary::before {
+  content: "▸";
+  color: var(--accent);
+  transition: transform 0.2s ease;
+}
+.research-topic[open] > summary::before { transform: rotate(90deg); }
+.research-topic > summary .about-subhead { margin: 0; }
+.research-topic > summary:hover .about-subhead { color: var(--accent); }
 .highlight-figure {
   float: left;
   width: 46%;
@@ -342,6 +360,7 @@ a:hover { text-decoration: underline; }
   margin-right: 0.3rem;
 }
 .self-author { color: inherit; }
+.research-topic .pub-empty { color: var(--text-soft); font-style: italic; }
 .pub-badge { font-family: var(--sans); font-size: 0.85rem; color: var(--accent); }
 .pub a:hover { text-decoration: underline; }
 
@@ -370,6 +389,15 @@ a:hover { text-decoration: underline; }
 .cv-body h4 { font-family: var(--heading); font-size: 1rem; font-weight: 600; margin-bottom: 0.15rem; }
 .cv-body p { color: var(--text-soft); font-size: 0.94rem; }
 .cv-meta { margin-top: 0.25rem; }
+.cv-subheading {
+  font-family: var(--heading);
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--text-soft);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  margin: 0.9rem 0 0.1rem;
+}
 
 /* =========================================================
    Contact
