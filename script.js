@@ -4,14 +4,16 @@ const toggle = document.getElementById("theme-toggle");
 const icon = toggle.querySelector(".theme-icon");
 
 // Load saved theme, or fall back to the OS preference.
-const saved = localStorage.getItem("theme");
+// (Storage can throw in private mode or when site data is blocked.)
+let saved = null;
+try { saved = localStorage.getItem("theme"); } catch (e) {}
 const prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
 setTheme(saved || (prefersDark ? "dark" : "light"));
 
 toggle.addEventListener("click", () => {
   const next = root.getAttribute("data-theme") === "dark" ? "light" : "dark";
   setTheme(next);
-  localStorage.setItem("theme", next);
+  try { localStorage.setItem("theme", next); } catch (e) {}
 });
 
 function setTheme(mode) {
