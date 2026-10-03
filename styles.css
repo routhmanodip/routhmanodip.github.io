@@ -292,7 +292,12 @@ a:hover { text-decoration: underline; }
 }
 
 .research-topic .about-subhead { margin-top: 0; }
-.research-topic p { margin-bottom: 0.95rem; color: var(--text); }
+.research-topic p {
+  margin-bottom: 0.95rem;
+  color: var(--text);
+  text-align: justify;
+  hyphens: auto;   /* avoids wide word gaps in the narrow column beside figures */
+}
 .research-topic sub { font-size: 0.75em; }
 .research-topic { display: flow-root; }
 .research-topic + .research-topic { margin-top: 1.6rem; }
@@ -316,7 +321,7 @@ a:hover { text-decoration: underline; }
 .research-topic > summary:hover .about-subhead { color: var(--accent); }
 .highlight-figure {
   float: left;
-  width: 46%;
+  width: 30%;
   margin: 0.35rem 1.6rem 1rem 0;
   padding: 0.7rem 0.7rem 0.6rem;
   background: var(--bg-alt);
