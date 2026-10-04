@@ -302,7 +302,8 @@ a:hover { text-decoration: underline; }
 .research-topic { display: flow-root; }
 .research-topic + .research-topic { margin-top: 1.6rem; }
 /* Toggle headings (<details>/<summary>) */
-.research-topic > summary {
+.research-topic > summary,
+.cv-section > summary {
   list-style: none;
   cursor: pointer;
   display: flex;
@@ -310,13 +311,16 @@ a:hover { text-decoration: underline; }
   gap: 0.5rem;
   margin-bottom: 0.6rem;
 }
-.research-topic > summary::-webkit-details-marker { display: none; }
-.research-topic > summary::before {
+.research-topic > summary::-webkit-details-marker,
+.cv-section > summary::-webkit-details-marker { display: none; }
+.research-topic > summary::before,
+.cv-section > summary::before {
   content: "▸";
   color: var(--accent);
   transition: transform 0.2s ease;
 }
-.research-topic[open] > summary::before { transform: rotate(90deg); }
+.research-topic[open] > summary::before,
+.cv-section[open] > summary::before { transform: rotate(90deg); }
 .research-topic > summary .about-subhead { margin: 0; }
 .research-topic > summary:hover .about-subhead { color: var(--accent); }
 .highlight-figure {
@@ -379,6 +383,10 @@ a:hover { text-decoration: underline; }
   margin: 0.4rem 0 0.5rem;
 }
 .cv-heading:first-of-type { margin-top: 0; }
+/* Collapsible CV sections (<details>/<summary>) */
+.cv-section + .cv-section { margin-top: 1.2rem; }
+.cv-section > summary .cv-heading { margin: 0; }
+.cv-section > summary:hover .cv-heading { color: var(--accent-2); }
 .cv-entry {
   display: grid;
   grid-template-columns: 150px 1fr;
