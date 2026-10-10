@@ -10,6 +10,7 @@
   --accent:    #8a1f2b;   /* academic maroon */
   --accent-2:  #b23342;
   --border:    #dee2e6;
+  --band:      #f1f3f5;
   --shadow:    0 6px 24px rgba(20, 25, 40, 0.07);
   --radius:    12px;
   --maxw:      880px;
@@ -27,6 +28,7 @@
   --accent:    #e0808c;
   --accent-2:  #eaa0aa;
   --border:    #262c34;
+  --band:      #1f242b;
   --shadow:    0 6px 24px rgba(0, 0, 0, 0.4);
 }
 
@@ -239,6 +241,7 @@ a:hover { text-decoration: underline; }
   font-family: var(--heading);
   font-size: 1.15rem;
   font-weight: 600;
+  color: var(--accent);
   margin: 1.4rem 0 0.6rem;
 }
 
@@ -313,7 +316,7 @@ a:hover { text-decoration: underline; }
   margin-bottom: 0.6rem;
   padding: 0.4rem 0.8rem;
   border-radius: 6px;
-  background: color-mix(in srgb, var(--accent) 12%, transparent);
+  background: var(--band);
 }
 .research-topic > summary::-webkit-details-marker,
 .cv-section > summary::-webkit-details-marker { display: none; }
@@ -328,7 +331,7 @@ a:hover { text-decoration: underline; }
 .research-topic[open] > summary::before,
 .cv-section[open] > summary::before { transform: rotate(90deg); }
 .research-topic > summary .about-subhead { margin: 0; }
-.research-topic > summary:hover .about-subhead { color: var(--accent); }
+.research-topic > summary:hover .about-subhead { color: var(--accent-2); }
 .highlight-figure {
   float: left;
   width: 30%;
