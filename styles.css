@@ -255,10 +255,28 @@ a:hover { text-decoration: underline; }
   border-radius: var(--radius);
   padding: 1.1rem 1.3rem;
 }
+.news > summary {
+  list-style: none;
+  cursor: pointer;
+  display: flex;
+  align-items: baseline;
+  gap: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+.news > summary::-webkit-details-marker { display: none; }
+.news > summary::before {
+  content: "▹";
+  color: var(--accent);
+  font-size: 1.15rem;
+  line-height: 1;
+  transition: transform 0.2s ease;
+}
+.news[open] > summary::before { transform: rotate(90deg); }
+.news:not([open]) > summary { margin-bottom: 0; }
 .news-title {
   font-family: var(--heading);
   font-size: 1.1rem;
-  margin-bottom: 0.5rem;
+  margin: 0;
 }
 .news-list { list-style: none; }
 .news-list li { color: var(--text-soft); font-size: 1rem; margin-bottom: 0.3rem; }
