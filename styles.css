@@ -317,6 +317,26 @@ a:hover { text-decoration: underline; }
   color: var(--accent);
 }
 
+/* Toggle bullet inside a topic list: the item's own arrow rotates when opened */
+.topic-list li.toggle-item { padding-left: 0; }
+.topic-list li.toggle-item::before { content: none; }
+.toggle-item > details > summary {
+  list-style: none;
+  cursor: pointer;
+  position: relative;
+  padding-left: 1.4rem;
+}
+.toggle-item > details > summary::-webkit-details-marker { display: none; }
+.toggle-item > details > summary::before {
+  content: "▹";
+  position: absolute; left: 0;
+  color: var(--accent);
+  transition: transform 0.2s ease;
+}
+.toggle-item > details[open] > summary::before { transform: rotate(90deg); }
+.toggle-item > details > summary:hover { color: var(--accent); }
+.toggle-item .sub-list { margin: 0.5rem 0 0.2rem 1.4rem; }
+
 .research-topic .about-subhead { margin-top: 0; }
 .research-topic p {
   margin-bottom: 0.95rem;

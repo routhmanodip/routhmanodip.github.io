@@ -15,7 +15,7 @@
       document.documentElement.setAttribute("data-theme", t);
     })();
   </script>
-  <link rel="stylesheet" href="styles.css?v=34" />
+  <link rel="stylesheet" href="styles.css?v=43" />
 </head>
 <body>
   <!-- ===== Header / Nav ===== -->
@@ -58,12 +58,31 @@
 
       <h3 class="about-subhead">A. Numerical Tools</h3>
       <ul class="topic-list">
-        <li><a href="https://tensornetwork.org/" target="_blank" rel="noopener">Tensor Network</a></li>
-        <li><a href="https://www.tensors.net/" target="_blank" rel="noopener">Tensors.net</a></li>
-        <li><a href="http://quattro.phys.sci.kobe-u.ac.jp/dmrg.html" target="_blank" rel="noopener">DMRG and Tensor Network by T. Nishino</a></li>
+        <li class="toggle-item">
+          <details>
+            <summary>Julia</summary>
+            <ul class="topic-list sub-list">
+              <li><a href="https://docs.julialang.org/en/v1/" target="_blank" rel="noopener">Julia Documentation</a></li>
+              <li><a href="https://benlauwens.github.io/ThinkJulia.jl/latest/book.html#_preface" target="_blank" rel="noopener">Think Julia</a></li>
+              <li><a href="https://computationalthinking.mit.edu/Fall24/" target="_blank" rel="noopener">MIT's Introduction to Computational Thinking (with Julia)</a></li>
+              <li><a href="https://julialang.org/learning/classes/" target="_blank" rel="noopener">Julia in the Classroom</a></li>
+              <li><a href="https://techytok.com/julia-vscode/" target="_blank" rel="noopener">Julia and VSCode</a></li>
+            </ul>
+          </details>
+        </li>
+        <li class="toggle-item">
+          <details>
+            <summary>DMRG &amp; Tensor Network</summary>
+            <ul class="topic-list sub-list">
+              <li><a href="https://tensornetwork.org/" target="_blank" rel="noopener">tensornetwork.org</a></li>
+              <li><a href="https://www.tensors.net/" target="_blank" rel="noopener">Tensors.net</a></li>
+              <li><a href="http://quattro.phys.sci.kobe-u.ac.jp/dmrg.html" target="_blank" rel="noopener">DMRG and Tensor Network by T. Nishino</a></li>
+              <li><a href="https://itensor.org/" target="_blank" rel="noopener">ITensor Library</a></li>
+              <li><a href="https://nextcloud.tfk.ph.tum.de/etn/" target="_blank" rel="noopener">European Tensor Network</a></li>
+            </ul>
+          </details>
+        </li>
         <li><a href="https://alps.comp-phys.org/" target="_blank" rel="noopener">ALPS – Algorithms and Libraries for Physics Simulations</a></li>
-        <li><a href="https://itensor.org/" target="_blank" rel="noopener">ITensor Library</a></li>
-        <li><a href="https://nextcloud.tfk.ph.tum.de/etn/" target="_blank" rel="noopener">European Tensor Network</a></li>
       </ul>
 
       <h3 class="about-subhead">B. Workshops / Conferences</h3>
