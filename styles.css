@@ -344,7 +344,8 @@ a:hover { text-decoration: underline; }
 }
 .research-topic sub { font-size: 0.75em; }
 .research-topic { display: flow-root; }
-.research-topic + .research-topic { margin-top: 1.6rem; }
+.research-topic + .research-topic,
+.research-topic + .cv-section { margin-top: 1.6rem; }
 /* Toggle headings (<details>/<summary>) */
 .research-topic > summary,
 .cv-section > summary {
@@ -415,7 +416,9 @@ a:hover { text-decoration: underline; }
   font-family: var(--sans);
   font-weight: 600;
   color: var(--accent);
-  margin-right: 0.3rem;
+  font-size: 0.6em;
+  vertical-align: middle;
+  margin-right: 0.4rem;
 }
 .self-author { color: inherit; }
 .research-topic .pub-empty { color: var(--text-soft); font-style: italic; }
@@ -451,6 +454,14 @@ a:hover { text-decoration: underline; }
 .cv-body h4 { font-family: var(--heading); font-size: 1rem; font-weight: 600; margin-bottom: 0.15rem; }
 .cv-body p { color: var(--text-soft); font-size: 1rem; }
 .cv-meta { margin-top: 0.25rem; }
+.cv-bulleted .cv-entry { grid-template-columns: 1fr; }
+.cv-bulleted .cv-body h4::before {
+  content: "●";
+  color: var(--accent);
+  font-size: 0.6em;
+  vertical-align: middle;
+  margin-right: 0.4rem;
+}
 .cv-subheading {
   font-family: var(--heading);
   font-size: 1rem;
