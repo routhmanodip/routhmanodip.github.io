@@ -416,9 +416,7 @@ a:hover { text-decoration: underline; }
   font-family: var(--sans);
   font-weight: 600;
   color: var(--accent);
-  font-size: 0.6em;
-  vertical-align: middle;
-  margin-right: 0.4rem;
+  margin-right: 0.3rem;
 }
 .self-author { color: inherit; }
 .research-topic .pub-empty { color: var(--text-soft); font-style: italic; }
@@ -455,11 +453,12 @@ a:hover { text-decoration: underline; }
 .cv-body p { color: var(--text-soft); font-size: 1rem; }
 .cv-meta { margin-top: 0.25rem; }
 .cv-bulleted .cv-entry { grid-template-columns: 1fr; }
+.cv-bulleted .cv-subheading { counter-reset: item; }
+.cv-bulleted .cv-entry { counter-increment: item; }
 .cv-bulleted .cv-body h4::before {
-  content: "●";
+  content: counter(item) ".";
   color: var(--accent);
-  font-size: 0.6em;
-  vertical-align: middle;
+  font-weight: 600;
   margin-right: 0.4rem;
 }
 .cv-subheading {
